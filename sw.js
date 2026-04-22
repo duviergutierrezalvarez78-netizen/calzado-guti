@@ -1,5 +1,5 @@
 // sw.js — Service Worker de Calzado Guti
-const CACHE_NAME = 'calzado-guti-v1';
+const CACHE_NAME = 'calzado-guti-v2';
 const ASSETS = [
   '/',
   '/index.html',
