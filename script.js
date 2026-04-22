@@ -1,13 +1,6 @@
 // script.js — Calzado Guti
 document.addEventListener('DOMContentLoaded', () => {
  
-  // ── PWA: Registro del Service Worker ──────────────────────────────────────
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log('SW registrado'))
-      .catch(err => console.warn('SW error:', err));
-  }
- 
   // ── Botón de instalar PWA ─────────────────────────────────────────────────
   let deferredPrompt = null;
   window.addEventListener('beforeinstallprompt', e => {
@@ -24,29 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  
   // ── CONTACTO: WhatsApp, Instagram, Email ──────────────────────────────────
-  // Datos de contacto — edita aquí con los reales
   const CONTACTO = {
-    whatsapp: '573001234567',          // número sin + ni espacios
-    instagram: 'calzadoguti',          // usuario de IG
+    whatsapp: '573001234567',
+    instagram: 'calzadoguti',
     email: 'ventas@calzadoguti.com'
   };
  
-  // Inyectar hrefs correctos en todos los íconos de redes
   document.querySelectorAll('.iconos-redes a').forEach((a, i) => {
     if (i === 0) {
-      // Instagram (primer ícono)
       a.href = `https://www.instagram.com/${CONTACTO.instagram}`;
       a.target = '_blank';
       a.rel = 'noopener';
       a.title = 'Instagram';
     } else if (i === 1) {
-      // WhatsApp (segundo ícono)
       a.href = `https://wa.me/${CONTACTO.whatsapp}?text=${encodeURIComponent('Hola, me interesa un producto de Calzado Guti 👟')}`;
       a.target = '_blank';
       a.rel = 'noopener';
       a.title = 'WhatsApp';
     } else if (i === 2) {
-      // Email (tercer ícono)
       a.href = `mailto:${CONTACTO.email}?subject=${encodeURIComponent('Consulta Catálogo Calzado Guti')}`;
       a.title = 'Email';
     }
@@ -123,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
       card.dataset.categoria = p.category;
       card.dataset.ciudad = p.ciudad;
  
-      // Botón WhatsApp por producto
       const waMsg = encodeURIComponent(`Hola! Me interesa el modelo *${p.name}* (ref. ${p.ref}) a $${Number(p.price).toLocaleString('es-CO')} 👟`);
       const waUrl = `https://wa.me/${CONTACTO.whatsapp}?text=${waMsg}`;
  
@@ -217,8 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  
   const navLinks = document.querySelectorAll('.pagination .pagination-link');
-  if (navLinks[0] && ['index.html', '', 'mujeres.html', 'mujeres2.html'].includes(currentFile)) {
-    // deshabilitar Anterior si es la primera página de la sección
+  if (navLinks[0]) {
     if (currentFile === 'index.html' || currentFile === '') navLinks[0].classList.add('disabled');
     if (currentFile === 'mujeres.html') navLinks[0].classList.add('disabled');
   }
