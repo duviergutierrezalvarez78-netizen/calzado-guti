@@ -2,7 +2,7 @@
   "name": "Calzado Guti",
   "short_name": "Guti",
   "description": "Catálogo digital de calzado - Medellín, Bogotá y Bucaramanga",
-  "start_url": "/calzado-guti/index.html",
+  "start_url": "https://duviergutierrezalvarez78-netizen.github.io/calzado-guti/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff4500",
