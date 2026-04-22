@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff4500">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Calzado Guti">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cabecera-ppal">
+  <h1>Calzado Guti</h1>
+  <form class="search-container" action="#" method="get">
+    <label for="search-input" class="visually-hidden"></label>
+    <input type="text" id="search-input" name="q" placeholder="Buscar...">
+    <button type="submit" class="search-button">Buscar</button>
+    
+    <button id="btn-instalar" title="Instalar app">⬇ Instalar App</button>
+  </form>
+</div>
+
+        <div class="cabecera-secundaria">
+
+            <nav class="navegacion-genero">
+                <a href="index.html">HOMBRES</a>
+                <a href="mujeres.html">MUJERES</a>
+            </nav>
+
+            <nav class="identidad">
+                <a href="somos.html">¿Quienes Somos?</a>
+            </nav>
+
+            <div class="iconos-redes">
+
+                <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z">
+                        </path>
+                    </svg></a>
+                <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M19.077,4.928C17.191,3.041,14.683,2.001,12.011,2c-5.506,0-9.987,4.479-9.989,9.985 c-0.001,1.76,0.459,3.478,1.333,4.992L2,22l5.233-1.237c1.459,0.796,3.101,1.215,4.773,1.216h0.004 c5.505,0,9.986-4.48,9.989-9.985C22.001,9.325,20.963,6.816,19.077,4.928z M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186 c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767c-0.125-0.167-1.019-1.353-1.019-2.581 S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006c0.178,0.007,0.375,0.016,0.562,0.431 c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416c-0.125,0.146-0.262,0.325-0.374,0.437 c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728c0.954,0.85,1.757,1.113,2.007,1.239 c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812 c0.25,0.125,0.416,0.187,0.478,0.291C17.106,14.471,17.106,14.971,16.898,15.554z">
+                        </path>
+                    </svg></a>
+                <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                        viewBox="0 0 24 24" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <polyline points="3 5 12 12 21 5"></polyline>
+                    </svg></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-area">
+        <div class="filters-container">
+            <h2>Filtros</h2>
+            <div class="filter-item">
+                <label class="main-filter-label">Calzado<input type="checkbox" id="calzadoToggle"></label>
+                <div id="calzadoOptions" class="submenu">
+                    <label><input type="radio" name="filtro-calzado" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-calzado" value="formal">Formal</label>
+                    <label><input type="radio" name="filtro-calzado" value="informal">Informal</label>
+                    <label><input type="radio" name="filtro-calzado" value="bota">Botas</label>
+                </div>
+            </div>
+            <!-- ... (Otros filtros de precio y ciudad) ... -->
+            <div class="filter-item">
+                <label class="main-filter-label">
+                    precio
+                    <input type="checkbox" id="precioToggle">
+                </label>
+                <div id="precioOptions" class="submenu">
+                    <label><input type="radio" name="filtro-precio" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-precio" value="100000-200000"> 100 - 200 mil</label>
+                    <label><input type="radio" name="filtro-precio" value="200001-300000"> 200 - 300 mil</label>
+                    <label><input type="radio" name="filtro-precio" value="300001-450000"> 300 - 450 mil</label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <label class="main-filter-label">
+                    ciudad
+                    <input type="checkbox" id="ciudadToggle">
+                </label>
+                <div id="ciudadOptions" class="submenu">
+                    <label><input type="radio" name="filtro-ciudad" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-ciudad" value="medellin"> Medellín</label>
+                    <label><input type="radio" name="filtro-ciudad" value="bucaramanga"> Bucaramanga</label>
+                    <label><input type="radio" name="filtro-ciudad" value="bogota"> Bogota</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-list">
+            <!-- Productos de mujeres.html del JSON -->
+            <div class="product-card" data-categoria="formal" data-ciudad="medellin">
+                <img src="img/zapatomujer8.webp" alt="Hera" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Hera</p>
+                    <p class="product-ref">ref. 95353</p>
+                    <p class="product-price">$ 350.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="bucaramanga">
+                <img src="img/zapatomujer2.webp" alt="Afrodita" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Afrodita</p>
+                    <p class="product-ref">ref. 35672</p>
+                    <p class="product-price">$ 210.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="bogota">
+                <img src="img/zapatomujer3.webp" alt="Casandra" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Casandra</p>
+                    <p class="product-ref">ref. 72345</p>
+                    <p class="product-price">$ 210.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="medellin">
+                <img src="img/zapatomujer4.webp" alt="Shena" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Shena</p>
+                    <p class="product-ref">ref. 53852</p>
+                    <p class="product-price">$ 400.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="bucaramanga">
+                <img src="img/zapatomujer5.webp" alt="Lea" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Lea</p>
+                    <p class="product-ref">ref. 90555</p>
+                    <p class="product-price">$ 199.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="bogota">
+                <img src="img/zapatomujer6.webp" alt="Atlas" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Atlas</p>
+                    <p class="product-ref">ref. 72005</p>
+                    <p class="product-price">$ 420.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="medellin">
+                <img src="img/zapatomujer7.webp" alt="Ninfa" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Ninfa</p>
+                    <p class="product-ref">ref. 11110</p>
+                    <p class="product-price">$ 370.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="bucaramanga">
+                <img src="img/zapatomujer8.webp" alt="Artemis" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Artemis</p>
+                    <p class="product-ref">ref. 90090</p>
+                    <p class="product-price">$ 235.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <nav aria-label="Navegación de páginas">
+        <ul class="pagination">
+            <li><a href="mujeres.html" class="pagination-link disabled">Anterior</a></li>
+            <li><a href="mujeres.html" class="page-link active">1</a></li>
+            <li><a href="mujeres2.html" class="page-link">2</a></li>
+            <li><a href="mujeres2.html" class="pagination-link">Siguiente</a></li>
+        </ul>
+    </nav>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

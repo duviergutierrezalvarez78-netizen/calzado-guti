@@ -1,0 +1,541 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Utilidad para accesibilidad: ocultar texto visualmente pero mantenerlo para lectores de pantalla */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  /* Evita el wrap */
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+
+
+.cabecera-ppal {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+
+
+}
+
+.cabecera-ppal {
+  font-size: 2rem;
+}
+
+.cabecera-ppal h1 {
+  color: orangered;
+}
+
+#search-input {
+  width: 280px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.search-button {
+  height: 25px;
+  width: 55px;
+}
+
+.search-button:hover {
+  color: orangered;
+}
+
+.cabecera-secundaria {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: solid 1px orange;
+}
+
+.cabecera-secundaria a {
+  color: black;
+}
+
+.navegacion-genero a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 0 20px;
+}
+
+/* Estado activo para la navegación de género */
+.navegacion-genero a.active {
+  background-color: orangered;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  color: darkorange;
+}
+
+.identidad a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.iconos-redes a svg {
+  padding: 0 10px;
+  fill: darkslategray;
+}
+
+
+.iconos-redes a svg:hover {
+  fill: darkorange;
+}
+
+
+
+
+/******filtros*/
+/* ... Tus estilos existentes terminan aquí ... */
+
+/* ... Tus estilos existentes ... */
+
+
+/* ************************************ */
+/* INICIO: Estilos de los Filtros */
+/* ************************************ */
+
+.main-content-area {
+  display: flex;
+  padding: 20px;
+  margin-top: 35px;
+  /* Reducir margen izquierdo para acercar la columna de filtros */
+  margin-left: 20px;
+
+}
+
+/* Estilos para la columna de filtros */
+.filters-container {
+  padding-top: 15px;
+  width: 140px;
+  flex-shrink: 0;
+  /* Ajustar posición: mover ligeramente hacia la derecha respecto a -40px */
+  margin-left: -10px;
+}
+
+.filters-container h2 {
+  margin-bottom: 18px;
+}
+
+.filter-item {
+  margin-bottom: 10px;
+}
+
+/*****tamaño y distancia d elos chexbox*/
+.filters-container .main-filter-label {
+  display: grid;
+  grid-template-columns: 0.5fr 15px;
+  user-select: none;
+}
+
+
+/* ************************************ */
+/* FIN: Estilos de los Filtros */
+/* ************************************ */
+
+
+/* ************************************ */
+/* INICIO: Estilos del Listado de Productos (Grid) */
+/* ************************************ */
+
+.product-list {
+  flex-grow: 1;
+  /* Permite que ocupe el espacio restante */
+  /* Mover más a la derecha aumentando el padding izquierdo */
+  padding-left: 60px;
+
+  /* Usa Grid para organizar los productos en filas de dos */
+  display: grid;
+  /* Dos columnas de tamaño flexible */
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: row-gap column-gap -> reducir separación horizontal entre columnas */
+  gap: 24px 12px;
+  /* 24px vertical, 12px horizontal */
+}
+
+/* ************************************ */
+/* FIN: Estilos del Listado de Productos (Grid) */
+/* ************************************ */
+
+
+/* ************************************ */
+/* INICIO: Estilos de la Tarjeta de Producto (Card) */
+/* ************************************ */
+
+.product-card {
+  display: flex;
+  /* Para alinear la imagen y los detalles horizontalmente */
+  align-items: center;
+}
+
+.product-image {
+  /* Ajusta el tamaño de la imagen para que se vea como en el ejemplo */
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  /* Estilo para el nombre del producto (Hades, Poseidon, etc.) */
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-ref {
+  /* Estilo para la referencia */
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  /* Estilo para el precio */
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+  /* Color anaranjado en la imagen, si quieres replicarlo: */
+  /* color: orangered; */
+}
+
+/* ************************************ */
+/* FIN: Estilos de la Tarjeta de Producto (Card) */
+/* ************************************ */
+
+.submenu {
+  /* Estado inicial: oculto */
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 5px 0 5px 10px;
+}
+
+/* Clase que JavaScript añade para MOSTRAR el submenú */
+.submenu.active {
+  display: flex;
+}
+
+
+
+
+.submenu label {
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/****paginacion*/
+
+.pagination {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.page-link {
+  padding: 8px 12px;
+  margin: 0 4px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.page-link:hover {
+  background-color: #e0e0e0;
+}
+
+.page-link.active {
+  background-color: orangered;
+  color: #fff;
+  border-color: orangered;
+}
+
+/***********Quienes somos****/
+/* --- ESTILOS ESPECÍFICOS PARA QUIÉNES SOMOS (somos.html) --- */
+
+/* Destacar el enlace activo en la navegación secundaria */
+.identidad a.active-bio {
+  font-weight: bold;
+  color: orangered;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 3px;
+}
+
+/* Contenedor principal de la biografía */
+.main-bio-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+/* Título de la sección */
+.bio-header h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: darkorange;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/* Galería de Imágenes Destacadas (Diseño con 3 columnas) */
+.bio-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.bio-card {
+  width: 30%;
+  text-align: center;
+}
+
+.bio-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  /* Para que las imágenes tengan el mismo tamaño */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  filter: brightness(0.95);
+}
+
+.bio-card img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bio-card p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Estilo para la introducción y el texto general */
+.bio-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* Bloques de Contenido (Diseño dinámico de dos columnas) */
+.block-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+.block-content h3 {
+  font-size: 1.8rem;
+  color: orangered;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.text-area {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-area {
+  flex: 1;
+  text-align: center;
+}
+
+.image-area img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.image-area p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #999;
+}
+
+/* Estilo para la Cita (El bloque izquierdo en el mockup) */
+.quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 5px solid orangered;
+  padding-left: 20px;
+  margin: 20px 0;
+  color: #555;
+}
+
+.quote-author {
+  font-weight: bold;
+  color: #888;
+  text-align: right;
+  margin-top: 10px;
+}
+
+#parrafo{
+  font-weight: lighter;
+  color: darkslategrey;
+  text-align: right;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* Bloque de Llamada a la Acción Final */
+.final-cta {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.final-cta p {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: orangered;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #cc4d00;
+}
+
+
+/* --- Media Queries para Responsividad (Móviles) --- */
+@media (max-width: 768px) {
+  .bio-header h2 {
+    font-size: 2rem;
+  }
+
+  .bio-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bio-card {
+    width: 100%;
+  }
+
+  .bio-intro {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .block-content {
+    flex-direction: column;
+    /* Apilar en móviles */
+  }
+
+  .right-text .image-area {
+    order: -1;
+    /* Mueve la imagen arriba en la sección derecha */
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+}
+/* ── AÑADIR AL FINAL DE style.css ── */
+ 
+/* Botón WhatsApp en cada tarjeta */
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-wa:hover { background: #1da851; }
+ 
+/* Botón instalar PWA en la cabecera */
+#btn-instalar {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#btn-instalar:hover { background: #cc3700; }
+ 
+/* Fix: pagination-link disabled */
+.pagination-link.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}

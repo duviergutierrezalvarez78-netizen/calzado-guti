@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina3</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff4500">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Calzado Guti">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cabecera-ppal">
+  <h1>Calzado Guti</h1>
+  <form class="search-container" action="#" method="get">
+    <label for="search-input" class="visually-hidden"></label>
+    <input type="text" id="search-input" name="q" placeholder="Buscar...">
+    <button type="submit" class="search-button">Buscar</button>
+    
+    <button id="btn-instalar" title="Instalar app">⬇ Instalar App</button>
+  </form>
+</div>
+        <div class="cabecera-secundaria">
+            <nav class="navegacion-genero">
+                <a href="index.html">HOMBRES</a>
+                <a href="mujeres.html">MUJERES</a>
+            </nav>
+            <nav class="identidad"><a href="somos.html">¿Quienes Somos?</a></nav>
+            <div class="iconos-redes">
+                <!-- SVGs de redes sociales -->
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-area">
+        <div class="filters-container">
+            <h2>Filtros</h2>
+            <div class="filter-item">
+                <label class="main-filter-label">Calzado<input type="checkbox" id="calzadoToggle"></label>
+                <div id="calzadoOptions" class="submenu">
+                    <label><input type="radio" name="filtro-calzado" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-calzado" value="formal">Formal</label>
+                    <label><input type="radio" name="filtro-calzado" value="informal">Informal</label>
+                    <label><input type="radio" name="filtro-calzado" value="bota">Botas</label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <label class="main-filter-label">precio<input type="checkbox" id="precioToggle"></label>
+                <div id="precioOptions" class="submenu">
+                    <label><input type="radio" name="filtro-precio" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-precio" value="100000-200000"> 100 - 200 mil</label>
+                    <label><input type="radio" name="filtro-precio" value="200001-300000"> 200 - 300 mil</label>
+                    <label><input type="radio" name="filtro-precio" value="300001-450000"> 300 - 450 mil</label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <label class="main-filter-label">ciudad<input type="checkbox" id="ciudadToggle"></label>
+                <div id="ciudadOptions" class="submenu">
+                    <label><input type="radio" name="filtro-ciudad" value="" checked>Todos</label>
+                    <label><input type="radio" name="filtro-ciudad" value="medellin"> Medellín</label>
+                    <label><input type="radio" name="filtro-ciudad" value="bucaramanga"> Bucaramanga</label>
+                    <label><input type="radio" name="filtro-ciudad" value="bogota"> Bogota</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-list">
+            <!-- Productos de pagina3.html del JSON -->
+            <div class="product-card" data-categoria="formal" data-ciudad="medellin">
+                <img src="img/zapato1.webp" alt="Orfeo" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Orfeo</p>
+                    <p class="product-ref">ref. 11393</p>
+                    <p class="product-price">$ 290.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="bucaramanga">
+                <img src="img/zapato2.webp" alt="Paris" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Paris</p>
+                    <p class="product-ref">ref. 15152</p>
+                    <p class="product-price">$ 265.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="bota" data-ciudad="bogota">
+                <img src="img/zapato6.webp" alt="Jason" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Jason</p>
+                    <p class="product-ref">ref. 12345</p>
+                    <p class="product-price">$ 450.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="medellin">
+                <img src="img/zapato4.webp" alt="Heracles" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Heracles</p>
+                    <p class="product-ref">ref. 19152</p>
+                    <p class="product-price">$ 310.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="bucaramanga">
+                <img src="img/zapato5.webp" alt="Prometeo" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Prometeo</p>
+                    <p class="product-ref">ref. 10010</p>
+                    <p class="product-price">$ 215.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="bota" data-ciudad="bogota">
+                <img src="img/zapato6.webp" alt="Icaro" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Icaro</p>
+                    <p class="product-ref">ref. 12005</p>
+                    <p class="product-price">$ 395.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="formal" data-ciudad="medellin">
+                <img src="img/zapato7.webp" alt="Narciso" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Narciso</p>
+                    <p class="product-ref">ref. 18100</p>
+                    <p class="product-price">$ 330.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-categoria="informal" data-ciudad="bucaramanga">
+                <img src="img/zapato8.webp" alt="Adonis" class="product-image">
+                <div class="product-details">
+                    <p class="product-name">Adonis</p>
+                    <p class="product-ref">ref. 19990</p>
+                    <p class="product-price">$ 240.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Navegación de páginas">
+        <ul class="pagination">
+            <li><a href="pagina2.html" class="pagination-link">Anterior</a></li>
+            <li><a href="index.html" class="page-link">1</a></li>
+            <li><a href="pagina2.html" class="page-link">2</a></li>
+            <li><a href="pagina3.html" class="page-link active">3</a></li>
+            <li><a href="#" class="pagination-link disabled">Siguiente</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
